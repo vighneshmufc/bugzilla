@@ -6,7 +6,7 @@
 #Inside every new folder created,an empty file named .stfolder is created. 
 
 
-read -p "enter folder path:" folder_path  #to get the input of the path where the folder has to be made
+read -p "enters folder path:" folder_path  #to get the input of the path where the folder has to be made
 read -p "enter initial fixed name:" name  #to get the first half of the folder name that is fixed
 read -p "enter the lower limit:" ll       #to get input for the lower limit of the range
 read -p "enter the upper limit:" ul       #to get input for the upper limit of the range
@@ -16,6 +16,7 @@ do
   if [ -d "$folder_path/$newname" ]       #if the name already exists for any other folder
   then
     echo "Directory " "$newname" " already exists"  #warning displayed if name already exists
+echo "Directory " "$newname" " already exists told ya"
   else                                              #if name does not exist
     mkdir -p "$folder_path/$newname" && touch "$folder_path/$newname/.stfolder"    #to make the folder and create an empty file inside it
   fi
